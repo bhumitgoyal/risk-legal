@@ -68,9 +68,7 @@ recommendations: Suggested improvements for each risky clause to enhance clarity
 
 Example JSON Output:
 
-json
-Copy
-Edit
+
 {
   "good_clauses": [
     {
@@ -92,18 +90,18 @@ Edit
     }
   ]
 }
-Please analyze the following legal document and generate a response in the above JSON format:
+Please analyze the following legal document and generate a response in the above JSON format only:
 
 
 
 
            
-            Only return valid JSON output, no additional explanations.
+            Only return valid JSON output, no additional words.
             """),
-            HumanMessage(content=f"""### Candidate Contract Analysis
+            HumanMessage(content=f"""###
             Contract Content: {resume_text}
                         
-            Provide a structured response in valid JSON format only.""")
+           """)
         ]
         
         response = chat_model.invoke(messages).content
