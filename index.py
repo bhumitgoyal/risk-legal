@@ -100,7 +100,8 @@ Only return valid JSON output, no additional words.
         response = chat_model.invoke(messages).content
 
         try:
-            return json.loads(response), None
+            data = json.loads(response)
+            return data, None
         except json.JSONDecodeError:
             # Log error and return a hardcoded response
             print(f"Invalid JSON response from AI: {response}")
