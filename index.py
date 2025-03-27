@@ -16,7 +16,7 @@ app = Flask(__name__)
 CORS(app)
 
 openai_api_key = os.getenv("OPENAI_API")
-chat_model = ChatOpenAI(model="gpt-4-0613", temperature=0.7, api_key=openai_api_key)
+chat_model = ChatOpenAI(model="gpt-3.5-turbo-1106", temperature=0.7, api_key=openai_api_key)
 
 # Set max file size (e.g., 5MB)
 app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # 5MB
